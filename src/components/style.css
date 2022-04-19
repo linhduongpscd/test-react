@@ -1,0 +1,27 @@
+@media (min-width: 600px) {
+    .css-aq1gdx-MuiDrawer-docked .MuiDrawer-paper {
+        width: 0px!important;
+    }
+}
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+    padding: 8px;
+}
+
+.border-btn {
+    border: 1px solid #333;
+}
+
+.css-1oqv2c0-MuiPaper-root-MuiCard-root {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) { 
+    .css-aq1gdx-MuiDrawer-docked .MuiDrawer-paper{
+        width: 0px!important;
+    }
+}
+
+.MuiBox-root {
+    overflow-y: auto;
+}
