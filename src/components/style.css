@@ -20,8 +20,163 @@
     .css-aq1gdx-MuiDrawer-docked .MuiDrawer-paper{
         width: 0px!important;
     }
+    .cp-wp {
+        flex-direction: column;
+    }
+    .cp-wp > div{
+        margin-bottom: 20px;
+    }
 }
 
 .MuiBox-root {
     overflow-y: auto;
 }
+
+.css-cvumne-MuiDrawer-docked .MuiDrawer-paper {
+    width: 190px!important;
+}
+
+.css-n7rtur-MuiPaper-root-MuiAppBar-root {
+    margin-left: 190px!important;
+    width: calc(100% - 190px)!important;
+}
+
+.menu-list .MuiTypography-root{
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.head-title {
+    font-family: 'Industry'!important;
+    font-style: normal!important;
+    font-weight: 800!important;
+    font-size: 42px!important;
+    line-height: 50px!important;
+
+    color: #FFFFFF!important;
+    margin-bottom: 20px!important;
+}
+
+.select-team{
+    width: 220px;
+}
+
+.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
+    color: #fff!important;
+}
+
+.btn-crim {
+    font-family: 'Industry'!important;
+    font-style: normal!important;
+    font-weight: 800!important;
+    font-size: 14px!important;
+    line-height: 17px!important;
+    padding: 13px!important;
+    color: #FFFFFF!important;
+    background: #7FB8F4!important;
+    border-radius: 6px!important;
+}
+
+.scrim-review {
+    font-family: 'Industry'!important;
+    font-style: normal!important;
+    font-weight: 800!important;
+    font-size: 24px!important;
+    line-height: 17px!important;
+    float: left;
+}
+
+.scrim-items .css-10wpov9-MuiTypography-root{
+    font-family: 'Industry';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.scrim-items .css-1sn4lm3-MuiTypography-root {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px;
+    /* or 140% */
+    color: #AAAAAA;
+}
+
+.left-box{
+    padding: 5px;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 60%;
+    background-color: #282828;
+    color: #fff;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    padding-left: 15px;
+}
+
+.right-box {
+    padding: 5px;
+    justify-content: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #7635ef;
+    width: 40%;
+    color: #fff;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+ .css-i4bv87-MuiSvgIcon-root {
+    font-size: 17px!important;
+}
+
+.wrapper-cpy {
+    background-color: rgb(40, 40, 40);
+    color: rgb(255, 255, 255);
+    flex-direction: row;
+    padding: 10px;
+    height: 100px;
+}
+
+.cp-wp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.left-cp, .right-cp{
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    /* or 200% */
+
+    display: flex;
+    align-items: center;
+
+    color: #AAAAAA;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+

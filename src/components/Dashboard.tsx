@@ -1,53 +1,46 @@
-import * as React from 'react';
-import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import MuiDrawer from '@mui/material/Drawer';
-import Box from '@mui/material/Box';
-import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import Badge from '@mui/material/Badge';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import Link from '@mui/material/Link';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import MainListItems from './listItem';
-import Chart from './Chart';
-import Deposits from './Deposits';
-import Orders from './Orders';
-import './style.css';
-import { Avatar, Button, Card, CardMedia, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material';
-import avatar from '../images/avatar.png'
-import SearchIcon from '@mui/icons-material/Search';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
-import FiberNewIcon from '@mui/icons-material/FiberNew';
-import FileUploadIcon from '@mui/icons-material/FileUpload';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import logo from '../images/champria.png'
 import ChatIcon from '@mui/icons-material/Chat';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import FiberNewIcon from '@mui/icons-material/FiberNew';
+import FileUploadIcon from '@mui/icons-material/FileUpload';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import MenuIcon from '@mui/icons-material/Menu';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import SearchIcon from '@mui/icons-material/Search';
+import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import { Avatar, Button, Card, MenuItem, Select, SelectChangeEvent } from '@mui/material';
+import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
+import Badge from '@mui/material/Badge';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import CssBaseline from '@mui/material/CssBaseline';
+import MuiDrawer from '@mui/material/Drawer';
+import Grid from '@mui/material/Grid';
+import IconButton from '@mui/material/IconButton';
+import List from '@mui/material/List';
+import { createTheme, styled, ThemeProvider } from '@mui/material/styles';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import * as React from 'react';
+import avatar from '../images/avatar.svg';
+import logo from '../images/champria.png';
+import MainListItems from './listItem';
+import './style.css';
 
 function Copyright(props: any) {
   return (
-    <div style={{ backgroundColor: '#282828', color: "#fff", diplay: 'flex', flexDirection: 'row', padding: '10px' }} variant="body2" color="text.secondary" align="center" {...props}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+    <div className='wrapper-cpy' variant="body2" color="text.secondary" align="center" {...props}>
+      <div className='cp-wp'>
+        <div className='left-cp'>
           <img src={logo} alt="" style={{ width: '30px', height: '30px', marginRight: '10px'}} />
           {'©2022 Champria.gg Terms of Service Privacy Policy'}
         </div>
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <div className='right-cp'>
           {'Connect with us'}
           <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '10px' }}>
             <ChatIcon style={{ marginRight: '5px' }}/>
@@ -57,7 +50,7 @@ function Copyright(props: any) {
             <LinkedInIcon/>
           </div>
         </div>
-        </div>
+      </div>
     </div>
   );
 }
@@ -161,7 +154,7 @@ function DashboardContent() {
                 <SearchIcon />
             </IconButton>
             <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
+              <Badge color="secondary">
                 <NotificationsIcon />
               </Badge>
             </IconButton>
@@ -169,20 +162,19 @@ function DashboardContent() {
                 <Avatar alt="Remy Sharp" src={avatar} />
                 <KeyboardArrowDownIcon/>
             </IconButton>
-            
           </Toolbar>
           <Toolbar
             sx={{
               pr: '24px', // keep right padding when drawer closed
             }}
-            style={{ minHeight: '150px', flexDirection: 'column', alignItems: 'flex-start' }}
+            style={{ minHeight: '126px', flexDirection: 'column', alignItems: 'flex-start' }}
           >
             <Typography
               component="h1"
               variant="h3"
               color="inherit"
               noWrap
-              // sx={{ flexGrow: 1 }}
+              className="head-title"
             >
               My Scrims
             </Typography>
@@ -190,6 +182,7 @@ function DashboardContent() {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
+                className='select-team'
                 defaultValue={10}
                 label="Team Name"
                 style={{ marginRight: '10px', border: '2px solid #fff', color: '#fff' }}
@@ -198,7 +191,7 @@ function DashboardContent() {
                 <MenuItem value={20}>Twenty</MenuItem>
                 <MenuItem value={30}>Thirty</MenuItem>
               </Select>
-              <Button variant="contained" style={{ padding: '10px' }}>Create Scrim</Button>
+              <Button variant="contained" className="btn-crim" style={{ padding: '10px' }}>Create Scrim</Button>
             </div>
           </Toolbar>
         </AppBar>
@@ -212,7 +205,8 @@ function DashboardContent() {
             }}
             style={{ 
                 backgroundColor: '#7635ef',
-                border: 'none'
+                border: 'none',
+                height: '80px'
              }}
           >
             <img src={logo} alt="" style={{ width: '30px', height: '30px', marginRight: '10px'}} />
@@ -226,7 +220,7 @@ function DashboardContent() {
           <List component="nav" style={{ backgroundColor: '#2f2f2f',
             color: '#fff',
             height: '100vh'
-            }}>
+            }} className="menu-list">
             <MainListItems/>
           </List>
         </Drawer>
@@ -236,7 +230,8 @@ function DashboardContent() {
             backgroundColor: '#181818',
             flexGrow: 1,
             height: '100vh',
-            overflowY: 'hidden'
+            overflowY: 'hidden',
+            minHeight: '1000px'
           }}
         >
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }} style={{ marginTop: '300px', minHeight: '600px' }}>
@@ -248,14 +243,15 @@ function DashboardContent() {
               {/* Recent Deposits */}
               <Grid item xs={12} md={6} lg={4}>
               <div>
-                <div style={{ display: 'flex', marginBottom: '20px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
                   <Typography
                     component="h1"
                     variant="h5"
                     color="inherit"
                     noWrap
-                    sx={{ flexGrow: 1 }}
+                    // sx={{ flexGrow: 1 }}
                     style={{ color: '#fff' }}
+                    className="scrim-review"
                   >
                     Scrim Review
                   </Typography>
@@ -268,9 +264,9 @@ function DashboardContent() {
                   </IconButton>
                   </div>
                 </div>
-                <div>
+                <div className='scrim-items'>
                 <Card sx={{ display: 'flex' }}>
-                  <Box sx={{ padding: '5px', display: 'flex', flexDirection: 'column', width: '50%', backgroundColor: '#282828', color: '#fff' }}>
+                  <Box className='left-box'>
                     <Typography variant="subtitle1" component="div">
                     PandaChan vs DORS
                     </Typography>
@@ -281,7 +277,7 @@ function DashboardContent() {
                     PandaChan vs DORS
                     </Typography>
                   </Box>
-                  <Box sx={{ padding: '5px', paddingLeft: '15%', display: 'flex', backgroundColor: '#7635ef', width: '50%', color: '#fff', alignItems: 'center' }}>
+                  <Box className='right-box'>
                     <ThumbUpIcon fontSize="inherit" style={{marginRight: '5px'}}/>
                     <ThumbDownAltIcon fontSize="inherit"  style={{marginRight: '5px'}}/>
                     <FiberNewIcon fontSize="inherit"  style={{marginRight: '5px'}}/>
@@ -289,7 +285,7 @@ function DashboardContent() {
                   </Box>
                 </Card>
                 <Card sx={{ display: 'flex' }}>
-                  <Box sx={{ padding: '5px', display: 'flex', flexDirection: 'column', width: '50%', backgroundColor: '#282828', color: '#fff' }}>
+                  <Box className='left-box'>
                     <Typography variant="subtitle1" component="div">
                     PandaChan vs DORS
                     </Typography>
@@ -300,7 +296,7 @@ function DashboardContent() {
                     PandaChan vs DORS
                     </Typography>
                   </Box>
-                  <Box sx={{ padding: '5px', paddingLeft: '15%', display: 'flex', backgroundColor: '#7635ef', width: '50%', color: '#fff', alignItems: 'center' }}>
+                  <Box className='right-box'>
                     <ThumbUpIcon fontSize="inherit" style={{marginRight: '5px'}}/>
                     <ThumbDownAltIcon fontSize="inherit"  style={{marginRight: '5px'}}/>
                     <FiberNewIcon fontSize="inherit"  style={{marginRight: '5px'}}/>
@@ -308,7 +304,7 @@ function DashboardContent() {
                   </Box>
                 </Card>
                 <Card sx={{ display: 'flex' }}>
-                  <Box sx={{ padding: '5px', display: 'flex', flexDirection: 'column', width: '50%', backgroundColor: '#282828', color: '#fff' }}>
+                  <Box className='left-box'>
                     <Typography variant="subtitle1" component="div">
                     PandaChan vs DORS
                     </Typography>
@@ -319,7 +315,7 @@ function DashboardContent() {
                     PandaChan vs DORS
                     </Typography>
                   </Box>
-                  <Box sx={{ padding: '5px', paddingLeft: '15%', display: 'flex', backgroundColor: '#7635ef', width: '50%', color: '#fff', alignItems: 'center' }}>
+                  <Box className='right-box'>
                     <ThumbUpIcon fontSize="inherit" style={{marginRight: '5px'}}/>
                     <ThumbDownAltIcon fontSize="inherit"  style={{marginRight: '5px'}}/>
                     <FiberNewIcon fontSize="inherit"  style={{marginRight: '5px'}}/>
@@ -327,7 +323,7 @@ function DashboardContent() {
                   </Box>
                 </Card>
                 <Card sx={{ display: 'flex' }}>
-                  <Box sx={{ padding: '5px', display: 'flex', flexDirection: 'column', width: '50%', backgroundColor: '#282828', color: '#fff' }}>
+                  <Box className='left-box'>
                     <Typography variant="subtitle1" component="div">
                     PandaChan vs DORS
                     </Typography>
@@ -338,26 +334,7 @@ function DashboardContent() {
                     PandaChan vs DORS
                     </Typography>
                   </Box>
-                  <Box sx={{ padding: '5px', paddingLeft: '15%', display: 'flex', backgroundColor: '#7635ef', width: '50%', color: '#fff', alignItems: 'center' }}>
-                    <Typography variant="subtitle1" component="div">
-                      View
-                    </Typography>
-                    <ArrowForwardIosIcon/>
-                  </Box>
-                </Card>
-                <Card sx={{ display: 'flex' }}>
-                  <Box sx={{ padding: '5px', display: 'flex', flexDirection: 'column', width: '50%', backgroundColor: '#282828', color: '#fff' }}>
-                    <Typography variant="subtitle1" component="div">
-                    PandaChan vs DORS
-                    </Typography>
-                    <Typography variant="caption" component="div">
-                    PandaChan vs DORS
-                    </Typography>
-                    <Typography variant="caption" component="div">
-                    PandaChan vs DORS
-                    </Typography>
-                  </Box>
-                  <Box sx={{ padding: '5px', paddingLeft: '15%', display: 'flex', backgroundColor: '#7635ef', width: '50%', color: '#fff', alignItems: 'center' }}>
+                  <Box className='right-box'>
                     <Typography variant="subtitle1" component="div">
                       View
                     </Typography>
@@ -365,7 +342,7 @@ function DashboardContent() {
                   </Box>
                 </Card>
                 <Card sx={{ display: 'flex' }}>
-                  <Box sx={{ padding: '5px', display: 'flex', flexDirection: 'column', width: '50%', backgroundColor: '#282828', color: '#fff' }}>
+                  <Box className='left-box'>
                     <Typography variant="subtitle1" component="div">
                     PandaChan vs DORS
                     </Typography>
@@ -376,7 +353,7 @@ function DashboardContent() {
                     PandaChan vs DORS
                     </Typography>
                   </Box>
-                  <Box sx={{ padding: '5px', paddingLeft: '15%', display: 'flex', backgroundColor: '#7635ef', width: '50%', color: '#fff', alignItems: 'center' }}>
+                  <Box className='right-box'>
                     <Typography variant="subtitle1" component="div">
                       View
                     </Typography>
@@ -384,7 +361,7 @@ function DashboardContent() {
                   </Box>
                 </Card>
                 <Card sx={{ display: 'flex' }}>
-                  <Box sx={{ padding: '5px', display: 'flex', flexDirection: 'column', width: '50%', backgroundColor: '#282828', color: '#fff' }}>
+                  <Box className='left-box'>
                     <Typography variant="subtitle1" component="div">
                     PandaChan vs DORS
                     </Typography>
@@ -395,7 +372,26 @@ function DashboardContent() {
                     PandaChan vs DORS
                     </Typography>
                   </Box>
-                  <Box sx={{ padding: '5px', paddingLeft: '15%', display: 'flex', backgroundColor: '#7635ef', width: '50%', color: '#fff', alignItems: 'center' }}>
+                  <Box className='right-box'>
+                    <Typography variant="subtitle1" component="div">
+                      View
+                    </Typography>
+                    <ArrowForwardIosIcon/>
+                  </Box>
+                </Card>
+                <Card sx={{ display: 'flex' }}>
+                  <Box className='left-box'>
+                    <Typography variant="subtitle1" component="div">
+                    PandaChan vs DORS
+                    </Typography>
+                    <Typography variant="caption" component="div">
+                    PandaChan vs DORS
+                    </Typography>
+                    <Typography variant="caption" component="div">
+                    PandaChan vs DORS
+                    </Typography>
+                  </Box>
+                  <Box className='right-box'>
                     <Typography variant="subtitle1" component="div">
                       View
                     </Typography>
